@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista_CEP</title>
+</head>
+<body>
+    <ul>
+        {% for crud in ceps %}
+            <li>{{crud.cep}} - {{crud.cidade}} / {{crud.estado}}
+                <a href={{crud.pk}}/editar>Editar</a>
+                <a href="{{crud.pk}}/deletar">Deletar</a>
+            </li>
+        {% endfor %}
+
+    </ul>
+    <a href="novo/">Novo CEP</a>
+</body>
+</html>
